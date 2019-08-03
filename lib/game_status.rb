@@ -44,4 +44,5 @@ end
 def winner(board)
   if win == won?(board)
     board[win.first]
+  end
 end
