@@ -43,9 +43,10 @@ end
 
 def winner?(board)
   won?(board).all do |win|
-  if  win == "X"
-    return win
-  elsif win == "O"
-    return "O"
+    if  win == "X"
+      return win
+    elsif win == "O"
+      return "O"
+    end
   end
 end
