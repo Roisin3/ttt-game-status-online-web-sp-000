@@ -37,7 +37,7 @@ def draw?(board)
   board.each do |move|
     if move == " " || move == ""
       return false
-    elsif won? = true
+    elsif won? == true
       return false
     else
       return true
