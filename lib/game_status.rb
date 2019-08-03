@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 	[2, 4, 6],
 ]
 # won? is called with arguement board. won? looks through the WIN_COMBINATIONS and calls all it finds w_index.
-#then it check that board[w_index[0]] is the same as board[w_index[1]] etc. last it call #position_taken to check
+# then it check that board[w_index[0]] is the same as board[w_index[1]] etc. last it call #position_taken to check
 # that the spots are occupied and not blank
 def won?(board)
   WIN_COMBINATIONS.detect do |w_index|
@@ -27,7 +27,8 @@ def won?(board)
   end
 end
 
-def full?
+def full?(board)
+  board.detect do |blank|
 end
 
 def draw?
