@@ -29,6 +29,7 @@ end
 
 def full?(board)
   board.detect do |blank|
+  end
 end
 
 def draw?
