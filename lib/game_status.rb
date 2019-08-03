@@ -18,19 +18,10 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |w_index|
-    w_index_1 = WIN_COMBINATIONS[0]
-    w_index_2 = WIN_COMBINATIONS[1]
-    w_index_3 = WIN_COMBINATIONS[2]
-    position_1 = board[w_index_1]
-    position_2 = board[w_index_2]
-    position_3 = board[w_index_3]
-
-    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-      puts "Top row win"
-    else
-      false
-    end
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
   end
 end
 
