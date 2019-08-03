@@ -35,7 +35,7 @@ end
 
 def draw?(board)
   board.none? do |blank|
-    (blank == " " || blank == "") && won?(board) = false
+    (blank == " " || blank == "") && won?(board) == false
   end
 end
 
