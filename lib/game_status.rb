@@ -16,12 +16,14 @@ WIN_COMBINATIONS = [
 	[0, 4, 8],
 	[2, 4, 6],
 ]
-
+# won? is called with arguement board. won? looks through the WIN_COMBINATIONS and calls all it finds w_index.
+#then it check that board[w_index[0]] is the same as board[w_index[1]] etc. last it call #position_taken to check
+# that the spots are occupied and not blank
 def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
-    board[combo[0]] == board[combo[1]] &&
-    board[combo[1]] == board[combo[2]] &&
-    position_taken?(board, combo[0])
+  WIN_COMBINATIONS.detect do |w_index|
+    board[w_index[0]] == board[w_index[1]] &&
+    board[w_index[1]] == board[w_index[2]] &&
+    position_taken?(board, w_index[0])
   end
 end
 
