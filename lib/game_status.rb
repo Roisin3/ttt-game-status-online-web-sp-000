@@ -41,5 +41,11 @@ def over?(board)
   won?(board) || full?(board) || draw?(board)
 end
 
-def winner?(board, symbol)
+def winner?(board)
+  won?(board).all do |win|
+  if  win == "X"
+    return win
+  elsif win == "O"
+    return "O"
+  end  
 end
