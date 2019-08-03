@@ -41,7 +41,7 @@ def over?(board)
   won?(board) || full?(board) || draw?(board)
 end
 
-def winner?(board)
+def winner(board)
   won?(board).all do |win|
     if  win == "X"
       return win
