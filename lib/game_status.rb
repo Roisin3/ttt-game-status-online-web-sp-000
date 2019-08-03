@@ -36,7 +36,7 @@ end
 def draw?(board)
   board.each do |move|
     board.none? do |blank|
-    blank == " " || blank == ""
+      blank == " " || blank == ""
   end
 end
 
