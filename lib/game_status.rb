@@ -34,8 +34,16 @@ def full?(board)
 end
 
 def draw?(board)
-  board.none? do |blank|
-    blank == " " || blank == ""
+  board.each do |move|
+    if move == " " || move == ""
+      return false
+    elsif won? = true
+      return false
+    else
+      return true
+    end
+  #board.none? do |blank|
+  #  blank == " " || blank == ""
   end
 end
 
