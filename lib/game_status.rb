@@ -28,7 +28,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all do |blank|
+  board.all? do |blank|
     if blank == "X" || blank == "O"
     end
   end
