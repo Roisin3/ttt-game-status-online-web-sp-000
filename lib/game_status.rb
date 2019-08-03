@@ -42,11 +42,6 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board).any? do |win|
-    if  won?(board) = "X"
-      return "X"
-    elsif win == "O"
-      return "O"
-    end
-  end
+  if win == won?(board)
+    board[win.first]
 end
