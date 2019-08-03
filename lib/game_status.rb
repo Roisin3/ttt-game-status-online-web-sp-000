@@ -36,6 +36,7 @@ end
 def draw?(board)
   board.none do |blank|
     blank == " " || blank == ""
+  end
 end
 
 def over?
