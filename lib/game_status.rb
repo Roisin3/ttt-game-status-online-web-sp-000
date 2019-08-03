@@ -34,7 +34,7 @@ def full?(board)
 end
 
 def draw?(board)
-  board.none do |blank|
+  board.none? do |blank|
     blank == " " || blank == ""
   end
 end
