@@ -35,7 +35,7 @@ end
 
 def draw?(board)
   board.none? do |blank|
-    (blank == "X" || blank == "O") && !won?(board)
+    full?(board) && !won?(board)
   end
 end
 
